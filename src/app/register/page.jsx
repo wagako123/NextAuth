@@ -45,12 +45,12 @@ export default function RegisterPage() {
               alt="Your Company"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+              Create you account
             </h2>
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-6" onSubmit={registerUser}>
             <div>
                 <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
                   Name
@@ -80,7 +80,7 @@ export default function RegisterPage() {
                     autoComplete="email"
                     required
                     value={data.email}
-                    onChange={(e)=>{setData({...data, name:e.target.value})}}
+                    onChange={(e)=>{setData({...data, email:e.target.value})}}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function RegisterPage() {
                     autoComplete="current-password"
                     required
                     value={data.password}
-                    onChange={(e)=>{setData({...data, name:e.target.value})}}
+                    onChange={(e)=>{setData({...data, password:e.target.value})}}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
